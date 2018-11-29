@@ -1,0 +1,16 @@
+<h1 class="text-center">Hello, <em><%= @user.username %></em></h1>
+<h3 class="text-center">Shown bellow are you current journal enteries:</h3>
+
+<% @user.journal_entries.each do |journal_entry| %>
+<ul>
+    <li><a href="/journal_entries/<%= journal_entry.id %>"><%= journal_entry.content %></a></li>
+</ul>
+<% end %>
+
+<br>
+<br>
+
+<a href="/journal_entries/new"><button>Add a New Entry</button></a>
+<br>
+<a href="/users/logout"><button>Log Out</button></a>
+

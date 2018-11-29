@@ -1,0 +1,19 @@
+<h1 class="text-center">Journal Entry: Show Page</h1>
+
+<div class="text-center">
+<p><%= @journal_entry.content %></p>
+
+<form method="post" action="/journal_entries/<%= @journal_entry.id %>/delete">
+    <input type="hidden" id="hidden" name="_method" value="DELETE">
+    <input type="submit" id="submit" value="Delete Entry">
+</form>
+
+<br>
+<h2 class="text-center"></h2>
+<a href="<%= @journal_entry.id %>/edit"><button>Edit</button></a>
+<br>
+<a href="/users/show"><button>Personal Page</button></a>
+</div>
+
+
+

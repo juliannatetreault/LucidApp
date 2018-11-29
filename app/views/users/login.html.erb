@@ -1,0 +1,28 @@
+<head>
+    <title class="text-center">Lucid: Login</title>
+</head>
+
+<body>
+
+<h1>Already have an account? Login here:</h1>
+<br>
+<br>
+<form method="POST" action="/users/login">
+    <label for="username">Username: 
+    <input type="text" id="username" name="username" />
+    </label>
+
+    <label for="email">Email: 
+    <input type="text" id="email" name="email" />
+    </label>
+    <label for="password">Password: 
+    <input type="password" id="password" name="password" />
+    </label>
+
+    <input type="submit" id="submit" value="Log In">
+</form>
+<br>
+<br>
+<h4>Oops, I don't have an account! Take me to the <a href="/users/new"><button> sign up </button></a> page!</h4>
+
+</body>

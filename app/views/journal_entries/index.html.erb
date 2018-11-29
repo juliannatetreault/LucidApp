@@ -1,0 +1,29 @@
+<h2 class="text-center">JOURNAL ENTRIES: </h2>
+
+<h2 class="text-center">Welcome back, <em><%= current_user.username %></em></h2>
+<h3 class="text-center">Your current entries are as follows:</h3>
+
+<div class="text-center">
+<% @journal_entries.each do |journal_entry| %>
+    <p>---------------------------------------------------------</p>
+    <h3><a href="/journal_entries/<%= journal_entry.id %>"></a></h3>
+    <br>
+    <p><%= journal_entry.content %></p>
+    <a href="/journal_entries/<%= journal_entry.id %>/edit"><button>Edit Entry</button></a>
+<% end %>
+</div>
+<br>
+<br>
+<div class="text-center">
+    <h2></h2>
+    <br>
+    <a href="/journal_entries/new"><button>Create a New Journal Entry</button></a>
+    <br>
+    <a href="/users/show"><button>Personal Page</button></a>
+    <br>
+    <a href="/"><button>Log Out</button></a>
+</div>
+
+
+
+

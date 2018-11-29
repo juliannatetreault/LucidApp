@@ -37,6 +37,12 @@ class UsersController < ApplicationController
     if params[:username] == "" || params[:email] == "" || params[:password] == ""
       #flash[:warning] = "Please fill out all fields to create an account."
       redirect "/users/new"
+      elsif User.all.find { |user| user.username == params[:username] }    
+      #flash[:warning] = "This username already exists. Please try again."
+      redirect to "/users/signup"
+      elsif User.all.find { |user| user.email == params[:email] }
+      #flash[:warning] = "An account using that email already exists. Please try again."
+      redirect to "/users/signup"
     else 
       @user = User.new(params)
         @user.save

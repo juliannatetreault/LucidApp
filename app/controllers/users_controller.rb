@@ -14,7 +14,8 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username])
 
     if @user && @user.authenticate(params[:password])
-        session[:user_id] = @user.id
+        session[:id] = @user.id
+        #binding.pry
         redirect "/journal_entries"
     else 
      #flash[:warning] = "Please sign up for an account before logging in."
@@ -39,10 +40,18 @@ class UsersController < ApplicationController
     else 
       @user = User.new(params)
         @user.save
-        session[:user_id] = @user.id
+        session[:id] = @user.id
         #flash[:notice] = "You have successfully created an account."
       redirect "/journal_entries"
     end
+  end
+
+  get "/users/logout" do
+      session[:id] = nil
+      #session.clear
+      #flash[:notice] = "You have successfully logged out."
+      redirect "/"
+    #end
   end
 
   # GET: /users/5
@@ -51,18 +60,11 @@ class UsersController < ApplicationController
       #flash[:error] = "You are not authorized to view this page."
       redirect "/users/login"
     else 
-      @user = User.find_by(id: session[:user_id])
+      @user = User.find_by(id: session[:id])
       erb :"/users/show.html"
     end
   end
 
-  get "/users/logout" do
-    if logged_in?
-      session[:id] = nil
-      session.clear
-      #flash[:notice] = "You have successfully logged out."
-      redirect "/"
-    end
-  end
+
 
 end

@@ -3,6 +3,11 @@
 <h2 class="text-center">Welcome back, <em><%= current_user.username %></em></h2>
 <h3 class="text-center">Your current entries are as follows:</h3>
 
+<form method="POST" action="/journal_entries/search">
+    <label for="search">Search: </label><input type ="text" id="search" name="search" />
+    <input type="submit" id="submit" value="Search" />
+</form>
+
 <div class="text-center">
 <% @journal_entries.each do |journal_entry| %>
     <p>---------------------------------------------------------</p>

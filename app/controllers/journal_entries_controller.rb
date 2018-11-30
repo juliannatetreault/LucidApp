@@ -30,6 +30,15 @@ end
     end
   end
 
+  post "/journal_entries/search" do     
+    @journal_entries = JournalEntry.all.select { |journal_entry| journal_entry.content.include?(params[:search]) }
+    erb :"/journal_entries/index.html"
+  end
+
+  #find all entries by the text that includes said entry
+  #show entries       
+  #trying to see if abc is included inside abcdefghijklmnop
+
   # GET: /journal_entries/5/edit
   get "/journal_entries/:id/edit" do
     if logged_in?
@@ -84,6 +93,7 @@ end
     end
   end
 end
+
 
 
 

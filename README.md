@@ -9,7 +9,8 @@ To use the LucidApp, a user must first install the application on their local ma
 - Execute `$bundle` to install gems
 - Execute `$shotgun` to start the server 
 - Navigate to `http://localhost:9393/`
-- Journal your dreams and enjoy!
+
+Finally, begin journaling your dreams, become more introspective, and sleep better!
 
 ## Usage
 

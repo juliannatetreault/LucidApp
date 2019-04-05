@@ -4,7 +4,7 @@ LucidApp is a Sinatra-based application that allows users to create and maintain
 
 ## Installation
 
-To use the LucidApp, a user must first install the application on their local machine by forking and cloning this repo. From their a user should follow these steps:
+To use the LucidApp, a user must first install the application onto their local machine by forking and cloning this repo. From there a user should follow these steps:
 
 - Execute `$bundle` to install gems
 - Execute `$shotgun` to start the server 

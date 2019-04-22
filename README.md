@@ -1,6 +1,6 @@
 # LucidApp
 
-LucidApp is a Sinatra-based application that allows users to create and maintain their own dream journal. LucidApp incorporates full CRUD actions, allowing users to create their own journal entries, read theirs and other users' entries, update the entries they've created, and delete any and all entries created on their account. 
+LucidApp is a Sinatra-based application that allows users to create and maintain their own dream journal. LucidApp incorporates full CRUD actions, allowing users to create their own journal entries, read theirs and other users' entries, update the entries they've created, and delete any and all entries created on their account.
 
 ## Installation
 
@@ -9,6 +9,7 @@ To use the LucidApp, a user must first install the application onto their local 
 - Execute `$bundle` to install gems
 - Execute `$shotgun` to start the server 
 - Navigate to `http://localhost:9393/`
+- Create an account or log into an exisiting account
 
 Finally, begin journaling your dreams, become more introspective, and sleep better!
 
